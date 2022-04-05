@@ -1,9 +1,9 @@
 import { Card, CardContent, Grid, Typography } from '@mui/material';
 import axios from 'axios';
 import React from 'react';
-import { WEATHER_API } from '../data/constant';
-import { Current, Geolocation } from '../types/type_defs';
-export const BeachCity = ({
+import { WEATHER_API } from '../../data/constant';
+import { Current, Geolocation } from '../../types/type_defs';
+export const SkiCity = ({
   city,
   filter,
 }: {
@@ -26,12 +26,8 @@ export const BeachCity = ({
     if (current) {
       return current.alerts
         ? 'Weather Alert'
-        : current.temp < 70
-        ? 'Temperature is too low (less than 70)'
-        : current.wind_speed > 20
-        ? 'It is too windy (over 20MPH)'
-        : current.clouds > 50
-        ? 'It is too cloudy (over 50%)'
+        : current.temp > 50
+        ? 'Temperature is too high (more than 50)'
         : null;
     }
     return null;

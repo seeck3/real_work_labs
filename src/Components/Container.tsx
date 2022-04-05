@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material';
 import React from 'react';
 import { Geolocation } from '../types/type_defs';
-import { BeachCities } from './BeachCities';
-import { SkiCities } from './SkiCities';
+import { BeachCities } from './Beach/BeachCities';
+import { SkiCities } from './Ski/SkiCities';
 
 /**
  * 
